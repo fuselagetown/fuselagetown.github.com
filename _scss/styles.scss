@@ -1,0 +1,382 @@
+@import "reset.css";
+
+
+/* BY TORUNN SEIM SKROGSTAD
+-------------------------------------*/
+
+@mixin clear {
+  &:before { content: ""; display: table; }
+  &:after { content: ""; display: table; clear: both; }
+  zoom: 1;
+}
+
+@mixin icons {
+	font-family: 'torunn';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+
+	font-weight: normal;
+	height: 100%;
+	font-size: 1em;
+
+	.home {
+		background-color: #f1e5f3;	
+		color: #698672;
+		}
+} 
+
+#page {
+	position: relative;
+}
+
+body {
+	background: #000;
+	&#hello { background: #a83c73; }
+	&#cv { background: #e34b64; }
+	&#givey { background: #c82650; }
+	&#tdc { background: #c00816; }
+}
+
+footer {
+	padding: 10px;
+	color: rgba(255,255,255,0.7);
+	&.social { background: transparent; }
+	a,
+	a:visited {
+		color: #fff !important; 
+		border-color: #fff !important;
+		background-color: transparent !important;
+		padding: 0 !important;
+		&:hover, &:focus {
+			color: #dff86b !important;
+			border-color: #dff86b !important;
+		}
+	}
+}
+
+header {
+	padding: 0;
+	text-transform: uppercase;
+	position: relative;
+	font-size: 0.7em;
+	img { display: none; }
+
+	h1 {
+		line-height: 54px;
+		margin: 0;
+		padding: 0 1em;
+		font-size: 1em;
+		a, a:visited { color : rgba(255,255,255,0.6); border-bottom: 0; }
+	}
+
+}
+
+#toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 2em;
+	line-height: 54px;
+	border-bottom: 0;
+	display: block;
+	background: #dff86b;
+	&:hover, &:focus { 
+				background-color: #d8fb60;
+			}
+			&:active { 
+				background-color: #f6feda; 
+				color: #000; 
+			}
+	i { display: none;
+		@include icons; 
+		&:after 	{ content: "\e607"; }
+	}
+
+}
+
+nav {
+
+	display: none;
+
+	ul, li { list-style: none; margin: 0; padding: 0;}
+
+	a,
+	a:visited {
+		display: block;
+		border-bottom: 0;
+		line-height: 54px;
+		padding: 0 1em;
+		margin: 0;
+		background: transparent;
+		border: none;
+		color: #fff;
+		&:hover,
+		&:focus { background: rgba(255,255,255,0.2); color: #fff;  
+		&:active { color: #000; background: #d8fb60; }
+		}
+
+
+	}
+
+	.active a,
+	.active a:visited  { background-color: #dff86b; color: #000;
+		&:hover, 
+		&:focus { background-color: #eafaa1; 
+			&:active { background-color: #fbfeee; }
+		}
+	 }
+
+}
+
+
+
+article {
+	margin: 0;
+	padding: 3%;
+	background: #fff; 
+	#gopro & { text-align: center;} 
+	@include clear;
+	blockquote &  { background: transparent; }
+}
+
+figure {
+	background: #fff;
+	article & { background: transparent; }
+}
+
+blockquote {
+	background: #333; 
+	color: #ccc; 
+	padding: 3em 3%;
+	text-align: center;
+	a,
+	a:visited { 
+		color: #fff; 
+		border-color: #fff;
+		&:hover, &:focus { color: #e34b64; border-color: #e34b64; }
+	} 
+
+	h6 { max-width: 40em; margin: 0 auto 1em; }
+
+}
+
+li:nth-child(2n+0) blockquote { 
+	background: #fff9fa;
+	color: #444;
+	a,
+	a:visited { 
+		color: #444; 
+		border-color: #444;
+		&:hover, &:focus { color: #e34b64; border-color: #e34b64; }
+	}
+}
+
+
+
+.twitter-tweet {
+	margin: 0 auto 1.5em !important;
+}
+
+.example {  
+	&.squid { max-width: 150px !important; }
+}
+
+@media only screen and (min-width : 320px) {
+
+.example {
+	max-width: 300px;
+	width: 50%;
+		float: right;
+		margin: 0 0 2% 5%;
+
+	#tdc & {
+		max-width: 48%;
+	}
+	}
+}
+
+#video {
+	background-color: black;
+	width: 100%;
+}
+
+figcaption,
+.caption {
+	padding: 1.5em 0;
+	font-size: 0.7em;
+	color: #aaa;
+	text-align: center;
+	display: block;
+}
+
+.social {
+	background: #a83c73;
+	color: #fff; 
+	text-align: center;
+	ul { 
+		margin: 0; 
+		padding: 0;
+	}
+
+	a,
+	a:visited {
+		color: #fff;
+		border-color: #fff; 
+	}
+
+	li { display: inline; 
+		a,
+		a:visited {
+		color: #fff;
+		border-bottom: 0;
+		background-color: #ce679c;
+		border-radius: 100%;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		&:hover, &:focus { background-color: #db82af; }
+		i {
+			@include icons;
+			margin-right: 3px;
+			padding: 7px;
+			display: block;
+			font-size: 16px;
+			border-radius: 100%;
+		}
+		&.twitter i:after 	{ content: "\e605"; }
+		&.dribbble i:after  { content: "\e606"; }
+		&.instagram i:after { content: "\e600"; }
+		&.flickr i:after { content: "\e602"; }
+		&.vimeo i:after { content: "\e601"; }
+		&.linkedin i:after { content: "\e603"; }
+		span { display: none; }
+		}
+	}
+}
+
+#portfolio {
+	
+	ul { 
+		margin: 0; 
+		padding: 0;
+	}
+
+	li {
+		position: relative;
+
+		p {
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			right: 10px;
+			text-align: center;
+			z-index: 3;
+
+			a,
+			a:active,
+			a:visited { 
+				background: rgba(0,0,0,0.3); 
+				border: 3px solid #fff;
+				color: #fff;
+				&:hover, &:focus {
+					border-color: #f44975;
+					color: #f44975; 
+					background: rgba(0,0,0,0.6); 
+				} 
+
+			}
+		}
+	}
+}
+
+
+#hello {
+	article:nth-child(2n-1) { background-color: #fff8fc; }
+}
+
+#cv {
+	article:nth-child(2n+1) { background-color: #fff9fa; }
+
+	article ul {
+		border-left: 4px solid #555;
+		padding: 0  0 0 20px ;
+	 	p { font-size: 0.8em; margin-bottom: 0.5em; } 
+	 	h6 { margin-bottom: 0.2em; }
+		li { margin-bottom: 1.5em; }
+		
+	}
+	.key-skills ul {
+		border-left: none;
+			padding: 0;
+			ul {
+				padding: 0 0 0 20px;
+				li { 
+					margin-bottom: 0.4em; 
+					list-style: square outside none;
+					font-size: 0.8em;
+				}
+			}
+		}
+
+	.references { 
+		padding: 0;
+
+		blockquote {
+			height: 350px;
+		}
+	
+	}
+
+
+
+}
+
+
+#givey {
+	article:nth-child(2n+4) { background-color: #fcfaff; }
+	blockquote article { background: #ac1d3e !important; }
+	#page a { 
+		color: #ed2856; border-color: #ed2856;
+		&:hover { color: #ac1d3e; border-color: #ac1d3e; } 
+		}
+	}
+
+	.active-profile { background: #242426;  }
+
+#tdc {
+	article:nth-child(2n) { background-color: #fdfff6; }
+	#page a { 
+		color: #c00816; border-color: #c00816; 
+		&:hover { color: #7e000a; border-color: #7e000a;  } 
+		} 
+	}
+
+	p { }
+
+#tedx {
+	article.content,
+	article.ongoing { background-color: #fafafa; }
+	article.visual{ background: #e22418; color: #fff; }
+	#page a {
+		color: #e62b1e; border-color: #e62b1e;
+		&:hover { color: #00d4f9; border-color: #00d4f9; } 
+		}
+	}
+
+
+
+
+
+
+
+

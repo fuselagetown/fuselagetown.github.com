@@ -1,0 +1,31 @@
+#page {
+  margin-bottom: 330px; }
+  #cv #page, #portfolio #page {
+    margin-bottom: 170px; }
+  #hello #page {
+    margin-bottom: 0; }
+
+article,
+footer {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-right: -webkit-calc(50% - 20em);
+  padding-right: -moz-calc(50% - 20em);
+  padding-right: calc(50% - 20em);
+  padding-left: -webkit-calc(50% - 20em);
+  padding-left: -moz-calc(50% - 20em);
+  padding-left: calc(50% - 20em); }
+
+figure,
+article,
+img,
+blockquote {
+  position: relative;
+  z-index: 2; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; }

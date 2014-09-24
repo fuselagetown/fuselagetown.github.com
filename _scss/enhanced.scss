@@ -1,0 +1,33 @@
+
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 1.2em;
+}
+
+
+nav {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0; 
+
+	 li { display: inline; }
+
+	 a {
+	 	float: left;
+	 }
+}
+
+#toggle {
+	display: none; 
+}
+
+.example {
+		float: right;
+		margin: 0 0 2% 5%;
+
+	#tdc & {
+		max-width: 48%;
+	}
+}
