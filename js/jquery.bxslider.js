@@ -20,7 +20,7 @@
 		infiniteLoop: true,
 		hideControlOnEnd: false,
 		speed: 500,
-		easing: null,
+		easing: null,  
 		slideMargin: 0,
 		startSlide: 0,
 		randomStart: true,
@@ -65,7 +65,7 @@
 
 		// AUTO
 		auto: true,
-		pause: 4000,
+		pause: 10000,
 		autoStart: true,
 		autoDirection: 'next',
 		autoHover: false,

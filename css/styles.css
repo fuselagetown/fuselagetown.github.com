@@ -39,6 +39,8 @@ footer {
     footer a:visited:focus {
       color: #dff86b !important;
       border-color: #dff86b !important; }
+  #cv footer, #portfolio footer {
+    text-align: center; }
 
 header {
   padding: 0;
@@ -128,6 +130,7 @@ article {
   margin: 0;
   padding: 3%;
   background: #fff;
+  position: relative;
   zoom: 1; }
   #gopro article {
     text-align: center; }
@@ -145,37 +148,6 @@ figure {
   background: #fff; }
   article figure {
     background: transparent; }
-
-blockquote {
-  background: #333;
-  color: #ccc;
-  padding: 3em 3%;
-  text-align: center; }
-  blockquote a,
-  blockquote a:visited {
-    color: #fff;
-    border-color: #fff; }
-    blockquote a:hover, blockquote a:focus,
-    blockquote a:visited:hover,
-    blockquote a:visited:focus {
-      color: #e34b64;
-      border-color: #e34b64; }
-  blockquote h6 {
-    max-width: 40em;
-    margin: 0 auto 1em; }
-
-li:nth-child(2n+0) blockquote {
-  background: #fff9fa;
-  color: #444; }
-  li:nth-child(2n+0) blockquote a,
-  li:nth-child(2n+0) blockquote a:visited {
-    color: #444;
-    border-color: #444; }
-    li:nth-child(2n+0) blockquote a:hover, li:nth-child(2n+0) blockquote a:focus,
-    li:nth-child(2n+0) blockquote a:visited:hover,
-    li:nth-child(2n+0) blockquote a:visited:focus {
-      color: #e34b64;
-      border-color: #e34b64; }
 
 .twitter-tweet {
   margin: 0 auto 1.5em !important; }
@@ -295,9 +267,6 @@ figcaption,
         color: #f44975;
         background: rgba(0, 0, 0, 0.6); }
 
-#hello article:nth-child(2n-1) {
-  background-color: #fff8fc; }
-
 #cv article:nth-child(2n+1) {
   background-color: #fff9fa; }
 #cv article ul {
@@ -319,10 +288,71 @@ figcaption,
       margin-bottom: 0.4em;
       list-style: square outside none;
       font-size: 0.8em; }
-#cv .references {
+
+.references {
   padding: 0; }
-  #cv .references blockquote {
-    height: 350px; }
+  .references blockquote {
+    height: 350px;
+    background: #333;
+    color: #ccc;
+    padding: 5em 3% 3em;
+    text-align: center; }
+    .references blockquote a,
+    .references blockquote a:visited {
+      color: #fff;
+      border-color: #fff; }
+      .references blockquote a:hover, .references blockquote a:focus,
+      .references blockquote a:visited:hover,
+      .references blockquote a:visited:focus {
+        color: #e34b64;
+        border-color: #e34b64; }
+    .references blockquote h6 {
+      max-width: 40em;
+      margin: 0 auto 1em; }
+  .references li:nth-child(2n+0) blockquote {
+    background: #faffe5;
+    color: #444; }
+    .references li:nth-child(2n+0) blockquote a,
+    .references li:nth-child(2n+0) blockquote a:visited {
+      color: #444;
+      border-color: #444; }
+      .references li:nth-child(2n+0) blockquote a:hover, .references li:nth-child(2n+0) blockquote a:focus,
+      .references li:nth-child(2n+0) blockquote a:visited:hover,
+      .references li:nth-child(2n+0) blockquote a:visited:focus {
+        color: #e34b64;
+        border-color: #e34b64; }
+    #cv .references li:nth-child(2n+0) blockquote {
+      background: #e5f59d; }
+
+.hello {
+  padding-bottom: 7%; }
+
+.references-title {
+  background: red;
+  position: absolute;
+  bottom: -30px;
+  z-index: 10;
+  min-height: 30px;
+  padding: 5%;
+  left: 0;
+  right: 0;
+  font-size: 0.7em;
+  margin-bottom: 0;
+  text-align: center;
+  background: url(../img/references-title.png) no-repeat bottom;
+  background-size: 100% auto; }
+
+.cta {
+  background: #dff86b; }
+  .cta a,
+  .cta a:visited {
+    color: #333;
+    border-color: #333; }
+    .cta a:hover, .cta a:focus,
+    .cta a:visited:hover,
+    .cta a:visited:focus {
+      color: #000;
+      border-color: #000; }
 
 #givey article:nth-child(2n+4) {
   background-color: #fcfaff; }

@@ -90,8 +90,19 @@
 
 
   <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="/js/jquery.bxslider-ck.js"></script>
+<!-- bxSlider CSS file -->
+<link href="/css/jquery.bxslider.css" rel="stylesheet" />
   
-<script type="text/javascript" src="js/core.js"></script>
+
+  <script>
+ $(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+  
+  </script>
 
 <script>
 var RimgOptions = { breakpoint:'-tiny 320w 1x, -small 480w 1x, -medium 600w 1x, -regular 768w 1x, -large 1024w 1x, -huge w 1x'};</script>
@@ -118,21 +129,71 @@ var RimgOptions = { breakpoint:'-tiny 320w 1x, -small 480w 1x, -medium 600w 1x, 
 
   <img src="img/torunn.jpg" data-src="img/torunn.jpg" />
   
-<article>
+<article class="hello">
 <h4>I'm Torunn Seim Skrogstad, a Norwegian designer, here to teach the masses about fuselages*.</h4>
 
 
 <p>I'm a UX/UI designer with 13 years experience in commercial design. I help startups and established companies nail down their user experiences, sell their products and look great in front of their competitors. I love a tight deadline, and I don't blow the budget. Sounds good? Let's <a href="skype:torunn_ss?call">Skype</a>.</p>
 
-<p>Lately I've been <a href="/portfolio">working</a> mostly with conferences and SaaS apps, but I'm open for anything that's creative and innovative. Is that your business or product? I'd love to hear about it.</p> 
-
+<h6 class="references-title">Don't take my word for it though..</h6>
 
 </article>
+<article class="references">
 
+
+
+<ul class="bxslider">
+  <li>
+    <blockquote>
+      <h6>Torunn stands out because she has excellent design sense, she works very quickly, proactively and efficiently and she's amiable and works well with people.</h6>
+      <p><a href="http://www.twitter.com/herbkim">Herb Kim</a></p>
+      <p>Founder of Thinking Digital</p>
+    </blockquote>
+  </li>
+  <li> 
+    <blockquote>
+      <h6>Torunn is a great addition to any team. Her UX concepts have been instrumental in redefining the online strategy for all projects. I would certainly re-hire her again if the opportunity ever arose.</h6>
+      <p><a href="http://www.twitter.com/waddle1980">Gary Jobe</a></p>
+      <p>Head of Creative Technology at Sky</p>
+    </blockquote>
+  </li>
+  <li> 
+    <blockquote>
+      <h6>She is quite frankly a machine!! A two man workstation doing all the designs and front end code reducing communication issues and hassle factor for everyone.</h6>
+      <p><a href="http://www.twitter.com/daveerasmus">Dave Erasmus</a></p>
+      <p>CEO of Givey</p>
+    </blockquote></li>
+  <li>
+    <blockquote>
+      <h6>Torunn was a joy to work with. She had fantastic, creative ideas. Torunn is one of the best front-end developers I have ever worked with.</h6>
+      <p><a href="http://www.twitter.com/nreavill">Nick Reavill</a></p>
+      <p>Principal Engineer at Stitch Fix</p>
+    </blockquote>
+  </li>
+  <li>    
+    <blockquote>
+      <h6>If it didn't cause a maelstrom of issues for all concerned, I'd probably marry @fuselagetown after today.</h6>
+      <p><a href="http://www.twitter.com/paul_a_smith">Paul Smith</a></p>
+      <p>Director at Ignite100</p>
+    </blockquote>
+  </li>
+  <li>    
+    <blockquote>
+      <h6>I've not found a better designer than you!</h6>
+      <p><a href="http://www.twitter.com/hubmum">Emma Mulqueeny</a></p>
+      <p>Founder of Rewired State</p>
+    </blockquote>
+  </li>
+</ul>
+
+</article>
+<article class="cta">
+
+<p>Lately I've been <a href="/portfolio">working</a> mostly with conferences and SaaS apps, but I'm open for anything that's creative and innovative. Is that your business or product? I'd love to hear about it - <a href="mailto:torunn@skrogstad.no">email me</a>.</p> 
+</article>
 </div>
 
 <article class="social">
-
 
 
   <p>I love being social, and here's where to find me
@@ -147,9 +208,6 @@ var RimgOptions = { breakpoint:'-tiny 320w 1x, -small 480w 1x, -medium 600w 1x, 
 
 </p>
 
-
-
-<p>or email me at <a href="mailto:torunn@skrogstad.no">torunn@skrogstad.no</a></p>
 
 <p class="small">* What is this Fuselagetown stuff, you say? <br />Skrog = Fuselage <br />Stad = Town <br />Simples. </p>
 </article>

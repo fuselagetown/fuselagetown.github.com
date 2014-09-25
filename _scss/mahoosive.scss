@@ -24,6 +24,8 @@ blockquote {
 	position: relative;
 	z-index: 2;
 
+	&.hello { z-index: 3; }
+
 }
 
 footer {
@@ -32,4 +34,9 @@ footer {
 	left:0;
 	right: 0;
 	z-index: 1;
+}
+
+.references-title {
+	min-height: 50px;
+	bottom: -50px;
 }
