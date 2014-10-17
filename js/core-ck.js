@@ -1,0 +1,1 @@
+$(function(){$("#toggle").click(function(){$("nav").slideToggle("fast","linear");return!1})});$.jribbble.getShotsByPlayerId("fuselagetown",function(e){var t=[];$.each(e.shots,function(e,n){t.push("<li>");t.push('<a href="'+n.url+'">');t.push('<img src="'+n.image_teaser_url+'" ');t.push('alt="'+n.title+'"></a></li>')});$("#shotsByPlayerId").html(t.join(""))},{page:1,per_page:8});

@@ -23,6 +23,11 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+$color-tdc: #c00816;
+$color-tedx: #e62b1e;
+$color-givey: #c82650;
+
+
 body {
 
 	font-weight: normal;
@@ -41,10 +46,10 @@ body {
 
 body {
 	background: #000;
-	&#hello { background: #a83c73; }
+	&#hello { background: #9cc5a3; }
 	&#cv { background: #e34b64; }
-	&#givey { background: #c82650; }
-	&#tdc { background: #c00816; }
+	&#givey { background: $color-givey; }
+	&#tdc { background: $color-tdc; }
 }
 
 footer {
@@ -74,6 +79,13 @@ header {
 	text-transform: uppercase;
 	position: relative;
 	font-size: 0.7em;
+	#hello & {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+	}
 	img { display: none; }
 
 	h1 {
@@ -143,13 +155,19 @@ nav {
 
 }
 
-
+blockquote {
+	@include clear;
+	text-align: center;
+	padding: 3em;
+	color: #fff;
+}
 
 article {
 	margin: 0;
 	padding: 3%;
 	background: #fff; 
 	position: relative;
+	&.hello { background: #fdfff2;  }
 	#gopro & { text-align: center;} 
 	@include clear;
 	blockquote &  { background: transparent; }
@@ -199,7 +217,7 @@ figcaption,
 }
 
 .social {
-	background: #a83c73;
+	background: #50307f;
 	color: #fff; 
 	text-align: center;
 	ul { 
@@ -218,7 +236,7 @@ figcaption,
 		a:visited {
 		color: #fff;
 		border-bottom: 0;
-		background-color: #ce679c;
+		background-color: #8969b8;
 		border-radius: 100%;
 		width: 30px;
 		height: 30px;
@@ -244,36 +262,72 @@ figcaption,
 }
 
 #portfolio {
+
+		h6 {
+			padding: 3%;
+		}
+
+	#page {
+	color: #fff;
+
 	
-	ul { 
-		margin: 0; 
-		padding: 0;
-	}
+		ul { 
+			margin: 0; 
+			padding: 0;
+		}
 
-	li {
-		position: relative;
+		li {
+			position: relative;
 
-		p {
-			position: absolute;
-			top: 50%;
-			left: 10px;
-			right: 10px;
-			text-align: center;
-			z-index: 3;
+			h6 { margin-bottom: 0; }
 
-			a,
-			a:active,
-			a:visited { 
-				background: rgba(0,0,0,0.3); 
-				border: 3px solid #fff;
-				color: #fff;
-				&:hover, &:focus {
-					border-color: #f44975;
-					color: #f44975; 
-					background: rgba(0,0,0,0.6); 
-				} 
+			&.givey { background-color: $color-givey; i { color: $color-givey; } }
+			&.tedx { background-color: #fff; color: $color-tedx; i { color: #fff; } }
+			&.tdc { background-color: #dff86b; color: #000; i { color: #dff86b; } }
+
+		
+
+			> a { 
+				display: block;
+				position: relative;
+				border-bottom: 0;
 
 			}
+
+			b {
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				right: 10px;
+				text-align: center;
+				z-index: 3;
+
+				.button { 
+					background: rgba(0,0,0,0.3); 
+					border: 3px solid #fff;
+					color: #fff;
+					&:hover, &:focus {
+						border-color: #f44975;
+						color: #f44975; 
+						background: rgba(0,0,0,0.6); 
+					} 
+
+				}
+			}
+		}
+
+		
+
+		i {
+			@include icons;
+			background: red;
+			height: 0px;
+			position: relative;
+			display: block;
+			font-size: 30px;
+			z-index: 4;
+			text-align: center;
+			&:after { content: "\e607"; }	
 		}
 	}
 }
@@ -313,7 +367,7 @@ figcaption,
 	height: 350px;
 	background: #333; 
 	color: #ccc; 
-	padding: 5em 3% 3em;
+	padding: 3em 3% 3em;
 	text-align: center;
 
 	a,
@@ -323,12 +377,12 @@ figcaption,
 		&:hover, &:focus { color: #e34b64; border-color: #e34b64; }
 	} 
 
-	h6 { max-width: 40em; margin: 0 auto 1em; }
+	h6 { max-width: 30em; margin: 0 auto 1em; }
 
 	}
 
 	li:nth-child(2n+0) blockquote { 
-		background: #faffe5;
+		background: #e2f0e6;
 		color: #444;
 		a,
 		a:visited { 
@@ -342,28 +396,29 @@ figcaption,
 
 }
 
-.hello {
-	padding-bottom: 7%;
-}
 
-.references-title {
-	background: red; 
+
+i.reference {
 	position: absolute;
-	bottom: -30px;
-	z-index: 10;
-	min-height: 30px;
-	padding: 5%;
+	top: 0;
 	left: 0;
 	right: 0;
-	font-size: 0.7em;
 	margin-bottom: 0;
+	@include icons;
+	height: 0px;
+	position: relative;
+	display: block;
+	font-size: 30px;
+	color: #fdfff2;
+	z-index: 4;
 	text-align: center;
-	background: url(../img/references-title.png) no-repeat bottom;
-	background-size: 100% auto;
+	&:after { content: "\e607"; }	
 }
 
+
 .cta {
-	background: #dff86b;
+	background: #c9e1d0;
+	h4 { text-align: center; }
 	a,
 	a:visited { 
 		color: #333; 
@@ -372,12 +427,29 @@ figcaption,
 	} 
 }
 
+.dribbble {
+	margin-bottom: 1em;
+	@include clear;
+
+	li {
+		width: 50%;
+		padding: 0 5px 5px 0;
+		float: left;
+		clear: none;
+	}
+
+	img {
+		border: 5px solid #fff; 
+	}
+}
+
 #givey {
-	article:nth-child(2n+4) { background-color: #fcfaff; }
+	article:nth-child(2n+3) { background-color: #fcfaff; }
+	blockquote { background: $color-givey; }
 	blockquote article { background: #ac1d3e !important; }
 	#page a { 
-		color: #ed2856; border-color: #ed2856;
-		&:hover { color: #ac1d3e; border-color: #ac1d3e; } 
+		color: $color-givey; border-color: $color-givey;
+		&:hover { color: darken($color-givey, 10%); border-color: darken($color-givey, 10%); } 
 		}
 	}
 
@@ -385,10 +457,11 @@ figcaption,
 
 #tdc {
 	article:nth-child(2n) { background-color: #fdfff6; }
+	blockquote { background: $color-tdc; }
 	#page a { 
-		color: #c00816; border-color: #c00816; 
-		&:hover { color: #7e000a; border-color: #7e000a;  } 
-		} 
+		color: $color-tdc; border-color: $color-tdc;
+		&:hover { color: darken($color-tdc, 10%); border-color: darken($color-tdc, 10%); } 
+		}
 	}
 
 	p { }
@@ -397,6 +470,7 @@ figcaption,
 	article.content,
 	article.ongoing { background-color: #fafafa; }
 	article.visual{ background: #e22418; color: #fff; }
+	blockquote { background: $color-tedx; }
 	#page a {
 		color: #e62b1e; border-color: #e62b1e;
 		&:hover { color: #00d4f9; border-color: #00d4f9; } 

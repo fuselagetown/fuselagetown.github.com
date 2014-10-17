@@ -6,7 +6,8 @@
 }
 
 article,
-footer {
+footer,
+#portfolio h6 {
 	padding-top: 3%;
 	padding-bottom: 3%;
 	padding-right: -webkit-calc(50% - 20em);
@@ -20,7 +21,8 @@ footer {
 figure,
 article,
 img,
-blockquote {
+blockquote,
+#portfolio li {
 	position: relative;
 	z-index: 2;
 
@@ -36,7 +38,5 @@ footer {
 	z-index: 1;
 }
 
-.references-title {
-	min-height: 50px;
-	bottom: -50px;
-}
+
+#portfolio #page i { font-size: 90px; }

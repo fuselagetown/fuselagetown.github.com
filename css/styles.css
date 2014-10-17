@@ -15,7 +15,7 @@ body {
 body {
   background: #000; }
   body#hello {
-    background: #a83c73; }
+    background: #9cc5a3; }
   body#cv {
     background: #e34b64; }
   body#givey {
@@ -47,6 +47,12 @@ header {
   text-transform: uppercase;
   position: relative;
   font-size: 0.7em; }
+  #hello header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3; }
   header img {
     display: none; }
   header h1 {
@@ -126,12 +132,27 @@ nav {
       nav .active a:visited:focus:active {
         background-color: #fbfeee; }
 
+blockquote {
+  zoom: 1;
+  text-align: center;
+  padding: 3em;
+  color: #fff; }
+  blockquote:before {
+    content: "";
+    display: table; }
+  blockquote:after {
+    content: "";
+    display: table;
+    clear: both; }
+
 article {
   margin: 0;
   padding: 3%;
   background: #fff;
   position: relative;
   zoom: 1; }
+  article.hello {
+    background: #fdfff2; }
   #gopro article {
     text-align: center; }
   article:before {
@@ -176,7 +197,7 @@ figcaption,
   display: block; }
 
 .social {
-  background: #a83c73;
+  background: #50307f;
   color: #fff;
   text-align: center; }
   .social ul {
@@ -192,7 +213,7 @@ figcaption,
     .social li a:visited {
       color: #fff;
       border-bottom: 0;
-      background-color: #ce679c;
+      background-color: #8969b8;
       border-radius: 100%;
       width: 30px;
       height: 30px;
@@ -240,32 +261,70 @@ figcaption,
       .social li a:visited span {
         display: none; }
 
-#portfolio ul {
-  margin: 0;
-  padding: 0; }
-#portfolio li {
-  position: relative; }
-  #portfolio li p {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    right: 10px;
-    text-align: center;
-    z-index: 3; }
-    #portfolio li p a,
-    #portfolio li p a:active,
-    #portfolio li p a:visited {
-      background: rgba(0, 0, 0, 0.3);
-      border: 3px solid #fff;
-      color: #fff; }
-      #portfolio li p a:hover, #portfolio li p a:focus,
-      #portfolio li p a:active:hover,
-      #portfolio li p a:active:focus,
-      #portfolio li p a:visited:hover,
-      #portfolio li p a:visited:focus {
-        border-color: #f44975;
-        color: #f44975;
-        background: rgba(0, 0, 0, 0.6); }
+#portfolio h6 {
+  padding: 3%; }
+#portfolio #page {
+  color: #fff; }
+  #portfolio #page ul {
+    margin: 0;
+    padding: 0; }
+  #portfolio #page li {
+    position: relative; }
+    #portfolio #page li h6 {
+      margin-bottom: 0; }
+    #portfolio #page li.givey {
+      background-color: #c82650; }
+      #portfolio #page li.givey i {
+        color: #c82650; }
+    #portfolio #page li.tedx {
+      background-color: #fff;
+      color: #e62b1e; }
+      #portfolio #page li.tedx i {
+        color: #fff; }
+    #portfolio #page li.tdc {
+      background-color: #dff86b;
+      color: #000; }
+      #portfolio #page li.tdc i {
+        color: #dff86b; }
+    #portfolio #page li > a {
+      display: block;
+      position: relative;
+      border-bottom: 0; }
+    #portfolio #page li b {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      right: 10px;
+      text-align: center;
+      z-index: 3; }
+      #portfolio #page li b .button {
+        background: rgba(0, 0, 0, 0.3);
+        border: 3px solid #fff;
+        color: #fff; }
+        #portfolio #page li b .button:hover, #portfolio #page li b .button:focus {
+          border-color: #f44975;
+          color: #f44975;
+          background: rgba(0, 0, 0, 0.6); }
+  #portfolio #page i {
+    font-family: 'torunn';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: red;
+    height: 0px;
+    position: relative;
+    display: block;
+    font-size: 30px;
+    z-index: 4;
+    text-align: center; }
+    #portfolio #page i:after {
+      content: "\e607"; }
 
 #cv article:nth-child(2n+1) {
   background-color: #fff9fa; }
@@ -295,7 +354,7 @@ figcaption,
     height: 350px;
     background: #333;
     color: #ccc;
-    padding: 5em 3% 3em;
+    padding: 3em 3% 3em;
     text-align: center; }
     .references blockquote a,
     .references blockquote a:visited {
@@ -307,10 +366,10 @@ figcaption,
         color: #e34b64;
         border-color: #e34b64; }
     .references blockquote h6 {
-      max-width: 40em;
+      max-width: 30em;
       margin: 0 auto 1em; }
   .references li:nth-child(2n+0) blockquote {
-    background: #faffe5;
+    background: #e2f0e6;
     color: #444; }
     .references li:nth-child(2n+0) blockquote a,
     .references li:nth-child(2n+0) blockquote a:visited {
@@ -324,26 +383,36 @@ figcaption,
     #cv .references li:nth-child(2n+0) blockquote {
       background: #e5f59d; }
 
-.hello {
-  padding-bottom: 7%; }
-
-.references-title {
-  background: red;
+i.reference {
   position: absolute;
-  bottom: -30px;
-  z-index: 10;
-  min-height: 30px;
-  padding: 5%;
+  top: 0;
   left: 0;
   right: 0;
-  font-size: 0.7em;
   margin-bottom: 0;
-  text-align: center;
-  background: url(../img/references-title.png) no-repeat bottom;
-  background-size: 100% auto; }
+  font-family: 'torunn';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 0px;
+  position: relative;
+  display: block;
+  font-size: 30px;
+  color: #fdfff2;
+  z-index: 4;
+  text-align: center; }
+  i.reference:after {
+    content: "\e607"; }
 
 .cta {
-  background: #dff86b; }
+  background: #c9e1d0; }
+  .cta h4 {
+    text-align: center; }
   .cta a,
   .cta a:visited {
     color: #333;
@@ -354,28 +423,50 @@ figcaption,
       color: #000;
       border-color: #000; }
 
-#givey article:nth-child(2n+4) {
+.dribbble {
+  margin-bottom: 1em;
+  zoom: 1; }
+  .dribbble:before {
+    content: "";
+    display: table; }
+  .dribbble:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .dribbble li {
+    width: 50%;
+    padding: 0 5px 5px 0;
+    float: left;
+    clear: none; }
+  .dribbble img {
+    border: 5px solid #fff; }
+
+#givey article:nth-child(2n+3) {
   background-color: #fcfaff; }
+#givey blockquote {
+  background: #c82650; }
 #givey blockquote article {
   background: #ac1d3e !important; }
 #givey #page a {
-  color: #ed2856;
-  border-color: #ed2856; }
+  color: #c82650;
+  border-color: #c82650; }
   #givey #page a:hover {
-    color: #ac1d3e;
-    border-color: #ac1d3e; }
+    color: #9d1e3f;
+    border-color: #9d1e3f; }
 
 .active-profile {
   background: #242426; }
 
 #tdc article:nth-child(2n) {
   background-color: #fdfff6; }
+#tdc blockquote {
+  background: #c00816; }
 #tdc #page a {
   color: #c00816;
   border-color: #c00816; }
   #tdc #page a:hover {
-    color: #7e000a;
-    border-color: #7e000a; }
+    color: #8f0610;
+    border-color: #8f0610; }
 
 #tedx article.content,
 #tedx article.ongoing {
@@ -383,6 +474,8 @@ figcaption,
 #tedx article.visual {
   background: #e22418;
   color: #fff; }
+#tedx blockquote {
+  background: #e62b1e; }
 #tedx #page a {
   color: #e62b1e;
   border-color: #e62b1e; }
